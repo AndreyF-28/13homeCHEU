@@ -336,19 +336,37 @@ h2.sh{font-size:clamp(26px,3.4vw,50px);font-weight:700;letter-spacing:-.025em;li
 /* ═══════════════════════════════
    CONTACT
 ═══════════════════════════════ */
-.contact{display:grid;grid-template-columns:1fr 1fr}
-.cl{background:var(--ink);padding:88px 56px;display:flex;flex-direction:column;justify-content:center}
-.cl h2{font-size:clamp(26px,3vw,44px);font-weight:700;color:var(--cream);letter-spacing:-.025em;line-height:1.1;margin-bottom:18px}
-.cl p{font-size:14px;font-weight:300;color:rgba(249,221,182,.48);line-height:1.82;max-width:320px;margin-bottom:44px}
-.c-ds{display:flex;flex-direction:column;gap:20px}
-.cdl{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--olive);margin-bottom:4px}
-.cdv{font-size:14px;font-weight:500;color:var(--cream)}
-.cr{background:var(--cream);padding:88px 56px;display:flex;flex-direction:column;justify-content:center}
-.cr h3{font-size:19px;font-weight:700;color:var(--ink);margin-bottom:28px;letter-spacing:-.01em}
+.contact{background:var(--cream);padding:100px 24px;display:flex;flex-direction:column;align-items:center}
+.contact-eyebrow{font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--olive);text-align:center;margin-bottom:18px}
+.contact-title{font-size:clamp(32px,4vw,54px);font-weight:700;color:var(--brown);text-align:center;line-height:1.1;margin-bottom:12px}
+.contact-title em{font-style:italic;font-weight:300}
+.contact-sub{font-size:14px;font-weight:300;color:var(--ink60);text-align:center;line-height:1.8;max-width:440px;margin:0 auto 48px}
+.contact-card{background:#fff;padding:52px 56px;max-width:700px;width:100%;box-shadow:0 2px 0 rgba(103,84,7,.2),0 24px 80px rgba(11,3,0,.08)}
+.contact-steps{display:flex;margin-bottom:36px;border-bottom:1px solid var(--ink08);padding-bottom:24px}
+.contact-step{flex:1;text-align:center;position:relative}
+.contact-step+.contact-step::before{content:'';position:absolute;top:11px;left:calc(-50% + 12px);right:calc(50% + 12px);height:1px;background:var(--ink08)}
+.contact-step-dot{width:22px;height:22px;border-radius:50%;background:var(--ink08);margin:0 auto 7px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--ink60)}
+.contact-step.active .contact-step-dot{background:var(--olive);color:#fff}
+.contact-step-l{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink60)}
+.contact-trust{display:flex;justify-content:center;gap:28px;margin-top:24px;flex-wrap:wrap}
+.contact-trust-item{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:600;color:var(--ink60)}
+.contact-trust-item span:first-child{font-size:15px}
+
+
+
+
+
+
+
+
 form{display:flex;flex-direction:column;gap:10px}
 .fr{display:flex;gap:10px}
-.fr .ff{flex:1;min-width:0}
-.ff{display:flex;flex-direction:column;gap:5px}
+.fr .ff{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px}
+.ff input,.ff select,.ff textarea{width:100%;background:#FAF8F4;border:1.5px solid transparent;padding:13px 16px;font-family:inherit;font-size:14px;color:var(--ink);outline:none;transition:all .2s;appearance:none;border-radius:0}
+.ff input:focus,.ff select:focus,.ff textarea:focus{border-color:var(--olive);background:#fff}
+.ff input::placeholder,.ff textarea::placeholder{color:rgba(11,3,0,.25)}
+.ff textarea{resize:vertical;min-height:80px}
+
 .ff label{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(11,3,0,.3)}
 .ff input,.ff textarea,.ff select{
   background:transparent;border:none;border-bottom:1px solid rgba(11,3,0,.2);
@@ -359,15 +377,17 @@ form{display:flex;flex-direction:column;gap:10px}
 .ff input:focus,.ff textarea:focus,.ff select:focus{border-color:var(--ink)}
 .ff input::placeholder,.ff textarea::placeholder{color:rgba(11,3,0,.2)}
 .ff textarea{resize:vertical;min-height:68px}
-.fsub{margin-top:18px;align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 30px;background:var(--ink);color:var(--cream);cursor:pointer;transition:background .18s;border:none;font-family:inherit}
-.fsub:hover{background:var(--brown)}
-.ff-error input,.ff-error textarea,.ff-error select,.ff-error .phone-wrap{border-bottom-color:#c0392b!important}
+.fsub{margin-top:8px;width:100%;background:var(--ink);color:var(--cream);border:none;padding:17px;font-family:inherit;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;transition:background .2s}
+.fsub:hover{background:var(--olive)}
+.fsub:disabled{opacity:.35;cursor:not-allowed;background:var(--ink)}
+.fsub:disabled:hover{background:var(--ink)}
+.ff-error input,.ff-error textarea,.ff-error select,.ff-error .ff-error .ff-error 
 .ff-error .err-msg{display:block}
 .err-msg{display:none;font-size:11px;color:#c0392b;margin-top:5px;letter-spacing:.02em}
 /* phone field with country code select */
-.phone-wrap{display:flex;gap:0;border-bottom:1px solid var(--ink20);transition:border-color .2s}
-.phone-wrap:focus-within{border-bottom-color:var(--olive)}
-.phone-select{background:transparent;border:none;border-right:1px solid var(--ink10);padding:10px 8px 10px 0;font-family:inherit;font-size:13px;color:var(--ink);outline:none;cursor:pointer;flex-shrink:0;max-width:110px}
+.phone-wrap{display:flex;background:#FAF8F4;border:1.5px solid transparent;transition:all .2s}
+.phone-wrap:focus-within{border-color:var(--olive);background:#fff}
+.phone-select{background:transparent;border:none;border-right:1.5px solid rgba(11,3,0,.08);padding:13px 10px;font-family:inherit;font-size:13px;color:var(--ink);outline:none;cursor:pointer;flex-shrink:0;max-width:120px}
 .phone-wrap input[type=tel]{flex:1;background:transparent;border:none;padding:10px 0 10px 10px;font-family:inherit;font-size:14px;color:var(--ink);outline:none}
 .fsub:disabled{opacity:.35;cursor:not-allowed;background:var(--ink)}
 .fsub:disabled:hover{background:var(--ink)}
@@ -463,10 +483,10 @@ footer{
   .faq-inner{grid-template-columns:1fr;gap:28px}
 
   /* ── CONTACT ── */
-  .contact{grid-template-columns:1fr}
-  .cl{padding:56px 20px}
-  .cr{padding:48px 20px}
-  .fr{flex-direction:column}
+  .contact{padding:64px 16px}
+  .contact-card{padding:36px 24px}
+  .fr{grid-template-columns:1fr}
+  .contact-trust{gap:16px}
 
   /* ── FOOTER ── */
   footer{padding:28px 20px;flex-direction:column;align-items:flex-start;gap:12px}
@@ -518,8 +538,8 @@ footer{
   .fq-body{font-size:13px}
 
   /* ── CONTACT ── */
-  .cl h2{font-size:clamp(22px,6vw,34px)}
-  .cr h3{font-size:17px}
+  
+  
   .ff input,.ff textarea,.ff select{font-size:13px}
   .fsub{font-size:10px;padding:13px 24px}
 
@@ -822,18 +842,24 @@ footer{
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="cl">
-    <div class="slbl" data-ru="Контакты" data-en="Contact">Контакты</div>
-    <h2 data-ru="Запишитесь на тур или получите консультацию" data-en="Book a tour or get a consultation">Запишитесь на тур или получите консультацию</h2>
-    <p data-ru="Свяжемся с вами в течение 1 часа. Расскажем про маршруты и как подготовиться к туру." data-en="We'll reach out within 1 hour and tell you about routes and how to prepare for the tour.">Свяжемся с вами в течение 1 часа. Расскажем про маршруты и как подготовиться к туру.</p>
-    <div class="c-ds">
-      <div><div class="cdl" data-ru="Телефон / WhatsApp" data-en="Phone / WhatsApp">Телефон / WhatsApp</div><div class="cdv">+86 130 6092 6778</div></div>
-      <div><div class="cdl" data-ru="Почта" data-en="Email">Почта</div><div class="cdv">hello@13home.cn</div></div>
-
+  <div class="contact-eyebrow" data-ru="Оставить заявку" data-en="Send a request">Оставить заявку</div>
+  <h2 class="contact-title" data-ru="Запишитесь на <em>консультацию</em>" data-en="Book a <em>free consultation</em>">Запишитесь на <em>консультацию</em></h2>
+  <p class="contact-sub" data-ru="Свяжемся с вами в течение 1 часа. Расскажем про маршруты и как подготовиться к туру." data-en="We'll reach out within 1 hour and tell you about routes and how to prepare for the tour.">Свяжемся с вами в течение 1 часа. Расскажем про маршруты и как подготовиться к туру.</p>
+  <div class="contact-card">
+    <div class="contact-steps">
+      <div class="contact-step active">
+        <div class="contact-step-dot">1</div>
+        <div class="contact-step-l" data-ru="Заявка" data-en="Request">Заявка</div>
+      </div>
+      <div class="contact-step">
+        <div class="contact-step-dot">2</div>
+        <div class="contact-step-l" data-ru="Консультация" data-en="Consultation">Консультация</div>
+      </div>
+      <div class="contact-step">
+        <div class="contact-step-dot">3</div>
+        <div class="contact-step-l" data-ru="Тур" data-en="Tour">Тур</div>
+      </div>
     </div>
-  </div>
-  <div class="cr">
-    <h3 data-ru="Оставить заявку" data-en="Send a request">Оставить заявку</h3>
     <form onsubmit="doForm(event)" novalidate>
       <div class="fr">
         <div class="ff" id="ff-name">
@@ -952,6 +978,12 @@ footer{
   </div>
 </div>
     </form>
+  </div><!-- /contact-card -->
+  <div class="contact-trust">
+    <div class="contact-trust-item"><span>🔒</span><span data-ru="Данные защищены" data-en="Data protected">Данные защищены</span></div>
+    <div class="contact-trust-item"><span>⚡</span><span data-ru="Ответ за 1 час" data-en="Reply in 1 hour">Ответ за 1 час</span></div>
+    <div class="contact-trust-item"><span>✓</span><span data-ru="Консультация бесплатно" data-en="Free consultation">Консультация бесплатно</span></div>
+    <div class="contact-trust-item"><span>📱</span><span>+86 130 6092 6778</span></div>
   </div>
 </section>
 
