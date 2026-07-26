@@ -387,8 +387,8 @@ form{display:flex;flex-direction:column;gap:10px}
 /* phone field with country code select */
 .phone-wrap{display:flex;background:#FAF8F4;border:1.5px solid transparent;transition:all .2s}
 .phone-wrap:focus-within{border-color:var(--olive);background:#fff}
-.phone-select{background:transparent;border:none;border-right:1.5px solid rgba(11,3,0,.08);padding:13px 8px;font-family:inherit;font-size:12px;color:var(--ink);outline:none;cursor:pointer;flex-shrink:0;width:auto;max-width:105px;min-width:0}
-.phone-wrap input[type=tel]{flex:1;min-width:0;background:transparent;border:none;padding:13px 12px;font-family:inherit;font-size:14px;color:var(--ink);outline:none;width:100%}
+.phone-select{background:transparent;border:none;border-right:1.5px solid rgba(11,3,0,.08);padding:13px 10px;font-family:inherit;font-size:13px;color:var(--ink);outline:none;cursor:pointer;flex-shrink:0;width:auto;max-width:110px;min-width:0}
+.phone-wrap input[type=tel]{flex:1;min-width:0;background:transparent;border:none;padding:13px 14px;font-family:inherit;font-size:14px;color:var(--ink);outline:none}
 .fsub:disabled{opacity:.35;cursor:not-allowed;background:var(--ink)}
 .fsub:disabled:hover{background:var(--ink)}
 .pd-wrap{display:flex;align-items:flex-start;gap:12px;margin-bottom:20px;margin-top:4px}
@@ -507,10 +507,7 @@ footer{
   .brg{order:2}
   .n-right{gap:6px}
   .ncta-consult{font-size:9px;padding:8px 12px;letter-spacing:.05em}
-  .fr{grid-template-columns:1fr}
-  #ff-phone{grid-column:1/-1;width:100%}
-  .phone-select{max-width:80px;font-size:11px;padding:11px 5px}
-  .phone-wrap input[type=tel]{padding:11px 8px}
+
 
   /* ── HERO ── */
   .hero{padding:68px 16px 40px}
@@ -874,7 +871,8 @@ footer{
           <input type="text" id="f-name" autocomplete="name" placeholder="">
           <span class="err-msg" id="err-name" data-ru="Пожалуйста, введите ваше имя" data-en="Please enter your name">Пожалуйста, введите ваше имя</span>
         </div>
-        <div class="ff" id="ff-phone">
+      </div>
+      <div class="ff" id="ff-phone" style="margin-bottom:20px">
           <label data-ru="Телефон / WhatsApp *" data-en="Phone / WhatsApp *">Телефон / WhatsApp *</label>
           <div class="phone-wrap" id="phone-wrap">
             <select class="phone-select" id="phone-code-select" onchange="onDialChange(this)">
@@ -920,7 +918,6 @@ footer{
             <input type="tel" id="phone-input" autocomplete="tel" placeholder="999 000 00 00" oninput="onPhoneInput(this)">
           </div>
           <span class="err-msg" id="err-phone" data-ru="Введите корректный номер телефона" data-en="Please enter a valid phone number">Введите корректный номер телефона</span>
-        </div>
       </div>
       <div class="ff" id="ff-email">
         <label>Email *</label>
