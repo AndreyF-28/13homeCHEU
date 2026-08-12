@@ -1,0 +1,152 @@
+/* ── CATALOG (horizontal scroll) ── */
+.cat-sec {
+  padding: 96px 0 96px 48px;
+  background: var(--cream2);
+  overflow: hidden;
+}
+.cat-hd {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-right: 48px;
+  margin-bottom: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.cat-tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 32px;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-right: 48px;
+}
+.cat-tabs::-webkit-scrollbar {
+  display: none;
+}
+.ctab {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 9px 20px;
+  border: 1px solid var(--ink08);
+  color: var(--ink60);
+  white-space: nowrap;
+  transition: all 0.18s;
+  cursor: pointer;
+}
+.ctab.on {
+  background: var(--ink);
+  color: var(--cream);
+  border-color: var(--ink);
+}
+.ctab:hover:not(.on) {
+  background: rgba(11, 3, 0, 0.05);
+}
+.cat-scroll {
+  display: flex;
+  gap: 3px;
+  overflow-x: auto;
+  padding-right: 48px;
+  padding-bottom: 4px;
+  cursor: grab;
+  user-select: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.cat-scroll::-webkit-scrollbar {
+  display: none;
+}
+.cat-scroll.drag {
+  cursor: grabbing;
+}
+.cc {
+  flex: 0 0 280px;
+  position: relative;
+  overflow: hidden;
+  background: var(--brown);
+}
+.cc::before {
+  content: "";
+  display: block;
+  padding-top: 132%;
+}
+.cc-in {
+  position: absolute;
+  inset: 0;
+}
+.cc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.72) saturate(0.8);
+  transition: transform 0.65s var(--ease);
+}
+.cc:hover .cc-img {
+  transform: scale(1.08);
+}
+.cc-gr {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(11, 3, 0, 0.88) 0%,
+    rgba(11, 3, 0, 0.1) 55%,
+    transparent 100%
+  );
+}
+.cc-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background: rgba(103, 84, 7, 0.85);
+  color: var(--cream);
+}
+.cc-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  background: var(--cream);
+  color: var(--ink);
+  opacity: 0;
+  transition: opacity 0.22s;
+}
+.cc:hover .cc-btn {
+  opacity: 1;
+}
+.cc-meta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 18px;
+}
+.cc-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 4px;
+}
+.cc-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}

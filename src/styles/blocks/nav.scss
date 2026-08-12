@@ -1,0 +1,235 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 68px;
+  transition: background 0.35s, border-color 0.35s;
+}
+nav.light {
+  background: rgba(249, 221, 182, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--ink08);
+}
+nav.dark {
+  background: rgba(11, 3, 0, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(249, 221, 182, 0.07);
+}
+
+/* Logo in nav — small */
+.nav-logo {
+  height: 30px;
+  width: auto;
+  flex-shrink: 0;
+  transition: filter 0.3s;
+}
+.nav-logo.cream {
+  filter: brightness(0) saturate(0) invert(1) sepia(0.12) opacity(0.85);
+}
+.nav-logo.dark-filter {
+  filter: brightness(0) sepia(0.3) opacity(0.8);
+}
+
+.n-mid {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.n-mid a {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+nav.light .n-mid a {
+  color: var(--ink60);
+}
+nav.light .n-mid a:hover {
+  color: var(--ink);
+}
+nav.dark .n-mid a {
+  color: rgba(249, 221, 182, 0.5);
+}
+nav.dark .n-mid a:hover {
+  color: var(--cream);
+}
+
+.n-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.lsw {
+  display: flex;
+  border: 1px solid;
+  overflow: hidden;
+}
+nav.light .lsw {
+  border-color: var(--ink20);
+}
+nav.dark .lsw {
+  border-color: rgba(249, 221, 182, 0.2);
+}
+.lb {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 5px 11px;
+  transition: all 0.18s;
+}
+nav.light .lb {
+  color: var(--ink60);
+}
+nav.light .lb.on {
+  background: var(--ink);
+  color: var(--cream);
+}
+nav.dark .lb {
+  color: rgba(249, 221, 182, 0.45);
+}
+nav.dark .lb.on {
+  background: var(--cream);
+  color: var(--ink);
+}
+.ncta {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  border: 1px solid;
+  transition: all 0.2s;
+}
+.ncta-nav {
+  display: inline-flex;
+}
+.ncta-consult {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+nav.light .ncta-consult {
+  background: var(--olive);
+  color: var(--cream);
+}
+nav.dark .ncta-consult {
+  background: var(--olive);
+  color: var(--cream);
+}
+.ncta-consult:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+.ncta-consult-nav {
+  display: inline-flex;
+}
+nav.light .ncta {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+nav.light .ncta:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+nav.dark .ncta {
+  border-color: rgba(249, 221, 182, 0.45);
+  color: var(--cream);
+}
+nav.dark .ncta:hover {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.brg {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 6px;
+}
+.brg span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  transition: all 0.28s;
+}
+nav.light .brg span {
+  background: var(--ink);
+}
+nav.dark .brg span {
+  background: var(--cream);
+}
+
+/* MOBILE MENU */
+.mmenu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--cream);
+  z-index: 199;
+  padding: 36px 28px;
+  overflow-y: auto;
+}
+.mmenu a:not(.mm-cta) {
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ink);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--ink08);
+  letter-spacing: -0.02em;
+}
+.mmenu .mm-cta {
+  display: inline-flex;
+  margin-top: 24px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  background: var(--ink);
+  color: var(--cream) !important;
+  border-bottom: none;
+}
+.mm-lang {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+.mm-lang button {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink60);
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.mm-lang button.on {
+  color: var(--ink);
+  border-bottom-color: var(--olive);
+}
+
+@media (max-width: 1024px) {
+  .n-mid {
+    display: none;
+  }
+}

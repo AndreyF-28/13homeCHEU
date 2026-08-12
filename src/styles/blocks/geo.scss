@@ -1,0 +1,68 @@
+/* ── GEOGRAPHY ── */
+.geo {
+  padding: 96px 48px;
+  background: var(--cream);
+}
+.geo-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+  margin-top: 52px;
+}
+.geo-list {
+  display: flex;
+  flex-direction: column;
+}
+.gi {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--ink08);
+  transition: padding-left 0.2s;
+}
+.gi:hover {
+  padding-left: 6px;
+}
+.gi:last-child {
+  border-bottom: none;
+}
+.gi-flag {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.gi-name {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.gi-sub {
+  font-size: 11px;
+  color: rgba(11, 3, 0, 0.4);
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+}
+.gi-arr {
+  margin-left: auto;
+  width: 14px;
+  height: 9px;
+  flex-shrink: 0;
+  opacity: 0.35;
+}
+/* map placeholder */
+.geo-map {
+  background: var(--ink);
+  border-radius: 2px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.geo-map svg {
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+}

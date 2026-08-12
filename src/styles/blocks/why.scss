@@ -1,0 +1,66 @@
+/* ── WHY US ── */
+.why {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--ink);
+  min-height: 60vh;
+}
+.why-img {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+.why-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6) saturate(0.75);
+}
+.why-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 60%, var(--ink) 100%);
+}
+.why-txt {
+  padding: 72px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.why-vals {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+.wv {
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(249, 221, 182, 0.07);
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 14px;
+  align-items: start;
+  transition: padding-left 0.2s;
+}
+.wv:hover {
+  padding-left: 6px;
+}
+.wv-i {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--olive);
+  margin-top: 3px;
+}
+.wv h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 5px;
+  letter-spacing: -0.01em;
+}
+.wv p {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(249, 221, 182, 0.4);
+  line-height: 1.72;
+}

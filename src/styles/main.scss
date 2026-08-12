@@ -1,0 +1,58 @@
+@import './variables.scss';
+@import './blocks/catalog.scss';
+@import './blocks/contact.scss';
+@import './blocks/faq.scss';
+@import './blocks/footer.scss';
+@import './blocks/geo.scss';
+@import './blocks/hero.scss';
+@import './blocks/how.scss';
+@import './blocks/intro.scss';
+@import './blocks/nav.scss';
+@import './blocks/reviews.scss';
+@import './blocks/ticker.scss';
+@import './blocks/tours.scss';
+@import './blocks/why.scss';
+
+*,*::before,*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0
+}
+
+html {
+    scroll-behavior:smooth
+}
+
+body {
+    font-family:'Manrope',sans-serif;
+    font-weight:300;
+    background:var(--cream);
+    color:var(--ink);
+    overflow-x:hidden
+}
+
+img {
+    display:block;
+    max-width:100%;
+    object-fit:cover
+}
+
+a {
+    color:inherit;
+    text-decoration:none
+}
+
+ul {
+    list-style:none
+}
+
+button {
+    font-family:inherit;
+    cursor:pointer;
+    border:none;
+    background:none
+}
+
+input,textarea,select {
+    font-family:inherit
+}
